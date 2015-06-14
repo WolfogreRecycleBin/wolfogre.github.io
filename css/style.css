@@ -32,6 +32,7 @@ a.button:hover, input.button:hover {background: #006699;color:#ffffff;}
 header {position:relative;height: 150px; background-color:#141414; border-bottom:5px solid #252525;}
 
 header #logo {position:absolute; top:40px; left: 30px;}
+header #headline {position:absolute; top:60px; left: 120px;color:#eeeeee;font-size:30px;font-family: "微软雅黑";}
 
 header #search-box {position: relative;width: 300px;margin-top:30px;}
 header #search-form {height: 25px;border: 1px solid #999;background-color: #fff;overflow: hidden;}
