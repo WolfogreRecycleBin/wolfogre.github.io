@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Run Ball</title>
+	<style type="text/css">
+		#Ball {
+			position: absolute;
+			height: 145px;
+			width: 145px;
+			top: 100px;
+			left: 100px;
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			-ms-border-radius: 50%;
+			-o-border-radius: 50%;
+			border-radius: 50%;
+			background: yellow;
+		}
+	</style>
+	<script type="text/javascript">
+		var x_left = 100;
+		var y_top = 100;
+		var x_velocity = 1;
+		var y_velocity = 2;
+		var delay_time = 1;
+		function Move(){
+			var e = document.getElementById('Ball');
+			if(x_left + parseInt(window.getComputedStyle(e, null).getPropertyValue("width")) >= window.innerWidth || x_left <= 0)
+			{
+				x_velocity = -x_velocity;
+				e.style.background = NewColor();
+			}
+			if(y_top + parseInt(window.getComputedStyle(e, null).getPropertyValue("height")) >= window.innerHeight || y_top <= 0)
+			{
+				y_velocity = -y_velocity;
+				e.style.background = NewColor();
+			}
+			x_left += x_velocity;
+			y_top += y_velocity;
+			var s = x_left + "px";
+			e.style.left = s;
+			s = y_top + "px";
+			e.style.top = s;
+			t = window.setTimeout("Move()",delay_time);
+		}
+
+		function NewColor(){
+			var num =  Math.round(Math.random() * 16777216);
+			var str_color = num.toString(16);
+			while(str_color.length < 6)
+					str_color = "0" + str_color;
+			str_color = "#" + str_color;
+			return str_color;
+		}
+	</script>
+</head>
+<body>
+	<div id="Ball"   onclick="Move()" ></div>
+</body>
+</html>
