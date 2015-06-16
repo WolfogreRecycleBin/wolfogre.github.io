@@ -63,3 +63,22 @@
   background: #57A957;
   border: 1px solid #4c964d;
   color: #FFF; }
+
+#counter_box
+{
+  position: relative;
+  left: 30px;
+  top: 20px;
+  width: 200px;
+  height: 100px;
+  float: left;
+  text-align:center;
+  outline:#fff groove medium;
+  background: #eee;
+  font-size: 20px; 
+}
+
+#counter
+{
+  height: 25px;
+}
