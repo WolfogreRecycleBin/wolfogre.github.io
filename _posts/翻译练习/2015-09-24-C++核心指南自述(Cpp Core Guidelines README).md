@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C++核心指南(Cpp Core Guidelines)"
+title: "C++核心指南自述(Cpp Core Guidelines README)"
 description: "内层C++是一门努力摆脱困境，追求更精巧，更安全，更安全的语言。"
 category: 翻译练习
 tags: [C++]
